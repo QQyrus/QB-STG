@@ -6,7 +6,7 @@ on:
       - staging
 
 jobs:
-  encrypt_secret:
+  create_encrypt_secret:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,6 +22,11 @@ jobs:
       run: npm install
 
     - name: Run script
-      run: node envOta.js --env=PUBLIC_UK 1.10.0 --env=WM 1.11.0
+      run: |
+        cd $GITHUB_WORKSPACE
+        node envOta.js --env=PUBLIC_UK 1.10.0 --env=WM 1.11.0
       env:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
+    
+    - name: List Files
+      run: ls
