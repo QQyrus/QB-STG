@@ -1,0 +1,18 @@
+{
+  "name": "qb-stg",
+  "version": "1.0.0",
+  "description": "Repository to maintain Staging Releases",
+  "main": "envOta.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QQyrus/QB-STG.git"
+  },
+  "author": "PN",
+  "license": "ISC",
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2"
+  }
+}
