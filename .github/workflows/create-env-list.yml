@@ -1,0 +1,27 @@
+name: Create an Encrypted Secret Text file with Env name and its QB version
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  encrypt_secret:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run script
+      run: node envOta.js --env=PUBLIC_UK 1.10.0 --env=WM 1.11.0
+      env:
+        SECRET_KEY: ${{ secrets.SECRET_KEY }}
