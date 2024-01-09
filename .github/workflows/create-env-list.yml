@@ -30,3 +30,25 @@ jobs:
     
     - name: List Files
       run: ls
+
+    - name: Install GitHub CLI
+      run: |
+        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+        sudo apt-add-repository https://cli.github.com/packages
+        sudo apt-get update
+        sudo apt-get install gh
+      
+    - name: Commit and push changes for newly created txt file
+      run: |
+        cd $GITHUB_WORKSPACE
+        git config --global user.email "punithn@quinnox.com"
+        git config --global user.name "npunith"
+        
+        git add secretEnvList.txt
+        git commit -m "Add encrypted secret text file"
+        
+        git push origin staging
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
+
