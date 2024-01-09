@@ -30,13 +30,6 @@ jobs:
     
     - name: List Files
       run: ls
-
-    - name: Install GitHub CLI
-      run: |
-        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-        sudo apt-add-repository https://cli.github.com/packages
-        sudo apt-get update
-        sudo apt-get install gh
       
     - name: Commit and push changes for newly created txt file
       run: |
