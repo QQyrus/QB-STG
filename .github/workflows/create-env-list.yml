@@ -24,7 +24,7 @@ jobs:
     - name: Run script
       run: |
         cd $GITHUB_WORKSPACE
-        node envOta.js --env=qyrus 1.10.0 --env=wm 1.11.0 --env=staging 1.7.0 --env=uat 1.7.0
+        node envOta.js --env=qyrus 1.10.0 --env=wm 1.11.0 --env=staging 1.7.1 --env=uat 1.7.1
       env:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
     
