@@ -24,7 +24,7 @@ jobs:
     - name: Run script
       run: |
         cd $GITHUB_WORKSPACE
-        node envOta.js --env=qyrus 1.15.1 --env=wm 1.15.1 --env=qyrus-uk 1.15.1 --env=shawbrook 1.15.1  --env=unum 1.15.1  --env=tsb 1.15.1  --env=cleco 1.15.1  --env=monument 1.15.1  --env=johndeere 1.15.1  --env=truist 1.15.1  --env=rccd 1.15.1 --env=valley 1.15.1 --env=vitas 1.15.1 --env=ccep 1.15.1 --env=tccc 1.15.1 --env=huntington 1.15.1 --env=casella 1.15.1 --env=uat 1.9.11 --env=staging 1.9.11  
+        node envOta.js --env=qyrus 1.15.1 --env=wm 1.15.1 --env=qyrus-uk 1.15.1 --env=shawbrook 1.15.1  --env=unum 1.15.1  --env=tsb 1.15.1  --env=cleco 1.15.1  --env=monument 1.15.1  --env=johndeere 1.15.1  --env=truist 1.15.1  --env=rccd 1.15.1 --env=valley 1.15.1 --env=vitas 1.15.1 --env=ccep 1.15.1 --env=tccc 1.15.1 --env=huntington 1.15.1 --env=casella 1.15.1 --env=uat 1.9.12 --env=staging 1.9.12  
       env:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
     
